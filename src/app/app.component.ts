@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simplecrud';
+  
+  
+
+  constructor(private approute:Router){
+    
+  }
+
+  listar(){
+    this.approute.navigate(["/listar"]);
+  }
+  agregar(){
+    this.approute.navigate(["/agregar"]);
+  }
 }
+
